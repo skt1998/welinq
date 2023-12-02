@@ -1,0 +1,267 @@
+:root {
+   /* Primary colors */
+   --primary-color: #868CD1;
+ 
+   --primary-dark: #2980b9;
+   --primary-light: #E5E7FF;
+   --primary-light-2: #ECEDFF;
+ 
+   /* Secondary colors */
+   --secondary-color: #2ecc71;
+   --secondary-dark: #27ae60;
+   --secondary-light: #58d68d;
+ 
+   /* Text colors */
+   --text-primary: #FFFFFF;
+   --text-secondary:#292C30;
+   ;
+ }
+
+
+.primary-color {
+   
+}
+.card-headder {
+   font-family: Poppins;
+font-size: 1.125remx;
+font-weight: 600;
+line-height: 1.5rem;
+letter-spacing: -0.25px;
+text-align: left;
+
+}
+.custom-btn {
+   display: inline-block;
+   padding: 0.625rem 1.25rem;
+   background-color: var(--primary-light); /* primary color */
+   color: black !important; /* text color */
+   border: none;
+   border-radius: 0.625rem;
+   cursor: pointer;
+   font-size: 0.875rem;
+   font-weight: bold;
+   text-align: center;
+   text-decoration: none;
+   transition: background-color 0.3s;
+ }
+
+ /* Button Hover Effect */
+ .custom-btn:hover {
+   opacity: 0.9;/* darker shade on hover */
+ }
+
+.card-sub-text {
+
+font-size: 0.875rem;
+font-weight: 500;
+line-height: 1.313;
+letter-spacing: 0px;
+text-align: left;
+
+}
+.active-text {
+   color: #396CE8;
+   font-family: Poppins;
+font-size: 0.625rem;
+font-weight: 500;
+line-height: 0.938rem;
+letter-spacing: -0.25px;
+text-align: left;
+
+
+}
+.scroll-y {
+   overflow-y: scroll;
+}
+.scroll-y::-webkit-scrollbar {
+
+   overflow-y: scroll;
+   scrollbar-width: thin;
+ }
+ .scroll-x {
+   overflow-x: scroll;
+   width: 100%; /* Set the width of your container */
+  overflow-x: scroll; /* Add horizontal scroll */
+  white-space: nowrap;
+}
+.scroll-x::-webkit-scrollbar {
+
+   overflow-y: scroll;
+   scrollbar-width: thin;
+ }
+.logoImg {
+   width:7.813rem;
+   height: 7.813rem;
+}
+.w-100 {
+   width: 100%;
+   
+}
+.rounded-5 {
+   border-radius: 0.313 !important;
+}
+.rounded-20 {
+   border-radius: 1.25rem !important;
+}
+.rounded-10 {
+   border-radius: 0.625rem !important;
+}
+.w-60 {
+   width: 60%;
+}
+.custom-no-elevation .v-input__slot {
+   box-shadow: none !important;
+ }
+.m-fav-height {
+   height: 50px !important;
+   width: 50px !important;
+}
+.cursor {
+   cursor: pointer;
+}
+.profile-pic {
+   width: 6.25rem;
+}
+.profileInfo {
+   width: calc(100% - 6.25rem);
+}
+
+
+
+
+
+
+.main-card {
+   width: 100%;
+   background-color: var(--primary-light);
+ 
+}
+
+.left-nav {
+   width: 21.875rem;
+   height: 100vh;
+   background-color: white;
+}
+.right-side {
+   width: calc(100% - 21.875rem);
+   height: fit-content
+  
+}
+.card-profile-image {
+   width: 5rem;
+}
+.main-section {
+   width: calc(100% - 26.688rem);
+   height: calc(100vh - 97px);
+
+}
+
+.d-flex-none {
+   display: unset !important;
+ }
+ .title-elipsis {
+
+   white-space: nowrap;
+   width: calc(100%);
+   overflow: hidden;
+   text-overflow: ellipsis;
+ }
+.righNav {
+   width: 26.688rem;
+   height: 100%;
+
+}
+.main-right {
+   width: 100%;
+   height: 100%;
+
+}
+.TherapistCardView {
+   width: 100%;
+   height: 100%;
+background-color: pink;
+   display: grid;
+   grid-column-gap: 8px;
+   grid-row-gap: 8px;
+ /* grid-template-columns: auto auto auto; */
+ grid-template-columns: repeat(2, 1fr); 
+   overflow-y: scroll;
+   
+}
+.subunit-cards {
+   width: 100%;
+   display: grid;
+   grid-column-gap: 10px;
+   grid-row-gap: 10px;
+ /* grid-template-columns: auto auto auto; */
+ grid-template-columns: repeat(6, fr); 
+   overflow-y: scroll;
+ }
+.TherapistCard {
+   width: 100%;
+ 
+   height: fit-content;
+   min-height: fit-content;
+   background-color: white;
+   max-height: fit-content;  
+   
+}
+@media only screen and (max-width: 1000px) {
+   /* Styles for screens smaller than 1000 pixels */
+ }
+ 
+ /* Responsive layout for screens between 601 and 900 pixels */
+ @media only screen and (min-width: 1000) and (max-width: 1200px) {
+   /* Styles for screens between  and 900 pixels */
+ }
+ @media only screen and (min-width: 1200px) and (max-width: 1800px) {
+
+   .subunit-cards {
+      width: 100%;
+      display: grid;
+      grid-column-gap: 10px;
+      grid-row-gap: 10px;
+    /* grid-template-columns: auto auto auto; */
+    grid-template-columns: repeat(1, 1fr); 
+      overflow-y: scroll;
+    }
+   
+   .left-nav {   
+      width: 18rem;
+      height: 100vh;
+      background-color: white;
+   }
+   .right-side {
+      width: calc(100% - 18rem);
+      height: fit-content
+     
+   }
+   .main-section {
+      width: calc(100% - 22rem);
+      height: calc(100vh - 97px);
+  
+   }
+   .righNav {
+      width: 22rem;
+      height: 100%;
+   }
+   
+   .main-right {
+      width: 100%;
+      height: 100%;
+  
+   }
+   .TherapistCard {
+      width: 100%;
+
+      min-height: fit-content;
+      background-color: white;
+      max-height: fit-content;
+   }
+
+   /* Styles for screens between  and 900 pixels */
+ }
+ /* Responsive layout for screens larger than 901 pixels */
+ @media only screen and (min-width: 1800) {
+   /* Styles for screens larger than 901 pixels */
+ }
