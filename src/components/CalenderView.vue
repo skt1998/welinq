@@ -220,5 +220,8 @@ text-align: center;
  .selected-day {
   background-color: var(--primary-color); /* Change the color to your desired selection color */
 }
+
+
+
  </style>
  

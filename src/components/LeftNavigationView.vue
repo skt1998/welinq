@@ -17,7 +17,7 @@
         <v-list-item
           v-for="(item, i) in items"
           :key="i"
-          to=""
+          :to="item.path"
         >
           <v-list-item-icon>
             <v-icon v-text="item.icon"></v-icon>
@@ -47,12 +47,12 @@
     data: () => ({
       selectedItem: 1,
       items: [
-        { text: 'Home', icon: 'mdi-home-outline' },
-        { text: 'My Sessions', icon: 'mdi-calendar-range' },
-        { text: 'Therapist', icon: 'mdi-head-cog-outline' },
-        { text: 'Quizzes', icon: 'mdi-wall' },
-        { text: 'Webinars', icon: 'mdi-account' },
-        { text: 'Profile', icon: 'mdi-emoticon-excited-outline' },
+        { text: 'Home', icon: 'mdi-home-outline' ,path:"/" },
+        { text: 'My Sessions', icon: 'mdi-calendar-range',path:"/" },
+        { text: 'Therapist', icon: 'mdi-head-cog-outline' ,path:"/therapists"},
+        { text: 'Quizzes', icon: 'mdi-wall',path:"/" },
+        { text: 'Webinars', icon: 'mdi-account',path:"/" },
+        { text: 'Profile', icon: 'mdi-emoticon-excited-outline',path:"/" },
       ],
     }),
 
