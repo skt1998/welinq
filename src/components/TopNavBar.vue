@@ -46,7 +46,7 @@
    name: "TopNavigationBar",
  
     data: () => ({
-    
+      search: "",
     }),
 
    components: {

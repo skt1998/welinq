@@ -1,27 +1,38 @@
 <template>
-   <v-card class="TherapistCard pa-4 d-flex flex-column align-center">
+   <v-card class=" elevation-0 TherapistCard pa-4 d-flex flex-column align-center rounded-10">
       <img src="../assets/Ellipse 5.svg" class="card-profile-image rounded-50 ">
-      <v-card-titile class="orange--text">
+      <v-card-title class="orange--text py-3">
          30$/h
-      </v-card-titile>
+      </v-card-title>
       <h4 class="card-headder">
          Mizuru Chizuhara <v-icon size="20" color="green">mdi-check-decagram</v-icon>
       </h4>
-      <div class="active-text">Last active 10min ago</div>
-      <h5 class="card-sub-text d-flex-none title-elipsis text-center">
+      <div class="active-text py-1">Last active 10min ago</div>
+      <div class="d-flex w-100 mb-1">
+         <img src="../assets/Vector.png">
+         <h5 class="card-sub-text ml-2 d-flex-none title-elipsis ">
          9yrs of experience
       </h5>
-      <h5 class="card-sub-text d-flex-none title-elipsis text-center">
-         Depression , Anxiety, Stress..
+      </div>
+      <div class="d-flex w-100 mb-1">
+         <img src="../assets/Group 26.png">
+      <h5 class="card-sub-text ml-2 d-flex-none title-elipsis ">
+           Depression , Anxiety, Stress
       </h5>
-      <h5 class="card-sub-text d-flex-none title-elipsis text-center">
-         Dialectical Behaviour Therap..
+      </div>
+     <div class="d-flex w-100 mb-1">
+      <img src="../assets/edu.png"> 
+
+      <h5 class="card-sub-text ml-2 d-flex-none title-elipsis ">
+         Dialectical Behaviour Therap
       </h5>
-      <div class="mt-4 w-100 d-flex flex-row justify-space-between">
+     </div>
+      
+      <div class="mt-4 w-100 d-flex flex-row justify-space-between align-center">
          <!-- <v-btn smoll color="primary" class="elevation-0  rounded-10">
             Book Session
          </v-btn> -->
-         <a  class="custom-btn">
+         <a  class="custom-btn  " style="width:100%">
     Book Session
   </a>
          <v-btn fab
@@ -29,7 +40,7 @@
          dark
          small
          color="#CCF4DA"
-         class=""
+         class="ml-2"
        >  <img src="../assets/comment.svg"></v-btn>
       </div>
 
@@ -47,7 +58,7 @@
       
    }),
    mounted() {
-console.error("wed------",window.innerWidth);
+// console.error("wed------",window.innerWidth);
   },
    
  };

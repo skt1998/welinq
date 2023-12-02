@@ -2,20 +2,28 @@
    <div class="custom-calendar rounded-10 pa-4">
       
      <div class="header">
-       <button @click="decreaseYear">&#9666;</button>
-       <!-- <select v-model="selectedYear" @change="updateCalendar">
+
+      <div class="w-fit">
+         <button @click="decreaseYear"><v-icon>mdi-chevron-left</v-icon></button>
+       <select class="mx-3" v-model="selectedYear" @change="updateCalendar">
          <option v-for="year in years" :key="year" :value="year">{{ year }}</option>
-       </select> -->
-       <q-select borderless v-model="selectedYear" :options="years"  />
-       <button @click="increaseYear">&#9656;</button>
+       </select>
+       <button @click="increaseYear"><v-icon>mdi-chevron-right</v-icon></button>
+
+      </div>
+      
 
 
-       <button @click="decreaseMonth">&#9666;</button>
+
+<div class="w-fit">
+   <button @click="decreaseMonth"><v-icon>mdi-chevron-left</v-icon></button>
        
-       <select v-model="selectedMonth" @change="updateCalendar">
+       <select class="mx-3" v-model="selectedMonth" @change="updateCalendar">
          <option v-for="(month, index) in months" :key="index" :value="index + 1">{{ month }}</option>
        </select>
-       <button @click="increaseMonth">&#9656;</button>
+       <button @click="increaseMonth"><v-icon>mdi-chevron-right</v-icon></button>
+</div>
+
    
      </div>
      <table class="calendar">
