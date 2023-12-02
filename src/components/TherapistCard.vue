@@ -1,30 +1,33 @@
 <template>
    <v-card class=" elevation-0 TherapistCard pa-4 d-flex flex-column align-center rounded-10">
-      <img src="../assets/Ellipse 5.svg" class="card-profile-image rounded-50 ">
+      <div class="card-profile-image rounded-50 overflow-hidden">
+       <img :src="therapist.photoUrl" class="card-profile-image rounded-50 overflow-hidden ">
+
+      </div>
       <v-card-title class="orange--text py-3">
-         30$/h
+         {{therapist.hourlyRate}}$/h
       </v-card-title>
       <h4 class="card-headder">
-         Mizuru Chizuhara <v-icon size="20" color="green">mdi-check-decagram</v-icon>
+         {{ therapist.nickname }} <v-icon size="20" color="green">mdi-check-decagram</v-icon>
       </h4>
       <div class="active-text py-1">Last active 10min ago</div>
       <div class="d-flex w-100 mb-1">
          <img src="../assets/Vector.png">
          <h5 class="card-sub-text ml-2 d-flex-none title-elipsis ">
-         9yrs of experience
+         {{therapist.expertExperience}} yrs of experience
       </h5>
       </div>
       <div class="d-flex w-100 mb-1">
          <img src="../assets/Group 26.png">
       <h5 class="card-sub-text ml-2 d-flex-none title-elipsis ">
-           Depression , Anxiety, Stress
+           {{ therapist.expertFocusArea.join(", ") }}
       </h5>
       </div>
      <div class="d-flex w-100 mb-1">
       <img src="../assets/edu.png"> 
 
       <h5 class="card-sub-text ml-2 d-flex-none title-elipsis ">
-         Dialectical Behaviour Therap
+         {{ therapist.qualification }}
       </h5>
      </div>
       
@@ -54,6 +57,7 @@
  
  export default {
    name: "TherapistCard.vue",
+   props: ["therapist"],
    data: () => ({
       
    }),

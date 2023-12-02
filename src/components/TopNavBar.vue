@@ -47,11 +47,40 @@
  
     data: () => ({
       search: "",
+      searchResult: [],
+      
     }),
+    computed: {
+     thearpists() {
+      return this.$store.state.therapists;
+     }
+    },
+    methods: {
+      searchData(newValue){
+        // console.log(newValue,this.thearpists)
+        this.searchResult = [];
+        this.thearpists.forEach((element) => {
+          if(JSON.stringify(element).toLocaleLowerCase().includes(newValue.toLocaleLowerCase())){
+            this.searchResult.push(element);
+          }          
+        });
+        console.log(this.searchResult)
+        this.$store.state.searchedResult = this.searchResult
+    }
+  },
 
    components: {
-    
+
    },
+   watch: {
+        search(newValue) {         
+            if (newValue == "" || newValue == null) {
+              this.$store.state.searchedResult = this.$store.state.therapists
+            } else {
+                this.searchData(newValue);
+            }
+        },
+      }
  };
  </script>
  

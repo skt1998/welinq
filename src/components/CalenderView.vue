@@ -34,7 +34,7 @@
        </thead>
        <tbody>
          <tr v-for="(week, weekIndex) in calendar" :key="weekIndex">
-           <td v-for="(day, dayIndex) in week" :key="dayIndex" :class="{ 'event-day': hasEvent(day) }" class="cursor"  @click="handleDateClick(day)">{{ day || '' }}</td>
+           <td v-for="(day, dayIndex) in week" :key="dayIndex" :class="{'event-day': hasEvent(day), 'selected-day': isSelected(day)}" class="cursor"  @click="handleDateClick(day)">{{ day || '' }}</td>
          </tr>
        </tbody>
      </table>
@@ -45,6 +45,7 @@
  export default {
    data() {
      return {
+      selectedDate: "not",
       selectedYear: new Date().getFullYear(),
       selectedMonth: new Date().getMonth() + 1,
       days: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
@@ -95,6 +96,7 @@
    },
    methods: {
       handleDateClick(day) {
+         this.selectedDate = day;
     const clickedDate = new Date(this.selectedYear, this.selectedMonth - 1, day);
     const eventData = this.getEventData(clickedDate);
 
@@ -103,6 +105,9 @@
 
     // You can now use 'clickedDate' and 'eventData' as needed.
   },
+  isSelected(day) {
+      return this.selectedDate === day;
+    },
 
   getEventData(clickedDate) {
     // Implement logic to fetch event data for the clicked date
@@ -212,5 +217,8 @@ text-align: center;
  .event-day {
    background-color: var(--primary-light-2) /* Light blue for event days */
  }
+ .selected-day {
+  background-color: var(--primary-color); /* Change the color to your desired selection color */
+}
  </style>
  

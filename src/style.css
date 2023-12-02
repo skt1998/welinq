@@ -246,8 +246,12 @@ text-align: center;
    height: fit-content
   
 }
+.rounded-50 {
+   border-radius: 50% !important;
+  }
 .card-profile-image {
    width: 5rem;
+   height: 5rem;
 }
 .footer {
    background-color: var(--primary-light-2) !important;
